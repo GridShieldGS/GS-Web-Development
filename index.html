@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GridShield — Proteção Orbital para Redes Elétricas</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;800;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="starfield" aria-hidden="true">
+    <div class="stars stars-sm"></div>
+    <div class="stars stars-md"></div>
+    <div class="stars stars-lg"></div>
+  </div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <circle cx="14" cy="14" r="13" stroke="var(--ciano)" stroke-width="1.5"/>
+            <circle cx="14" cy="14" r="6" stroke="var(--ciano)" stroke-width="1" stroke-dasharray="3 2"/>
+            <circle cx="14" cy="14" r="2.5" fill="var(--ciano)"/>
+            <line x1="14" y1="1" x2="14" y2="6" stroke="var(--ciano)" stroke-width="1.5"/>
+            <line x1="14" y1="22" x2="14" y2="27" stroke="var(--ciano)" stroke-width="1.5"/>
+            <line x1="1" y1="14" x2="6" y2="14" stroke="var(--ciano)" stroke-width="1.5"/>
+            <line x1="22" y1="14" x2="27" y2="14" stroke="var(--ciano)" stroke-width="1.5"/>
+          </svg>
+        </span>
+        Grid<span>Shield</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#tecnologia">Tecnologia</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#publico">Público-alvo</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#aplicacao">Aplicação</a></li>
+      </ul>
+      <button class="nav-cta">Saiba mais</button>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-badge">
+      <span class="pulse-dot"></span>
+      Monitoramento ativo — DSCOVR · L1 · NASA / NOAA
+    </div>
+    <h1 class="hero-title">
+      O espaço nos avisa.<br/>
+      <span class="highlight">Nós protegemos a Terra.</span>
+    </h1>
+    <p class="hero-sub">
+      GridShield usa dados orbitais de satélites em tempo real para prever
+      tempestades geomagnéticas e proteger redes elétricas críticas antes do impacto.
+    </p>
+    <div class="hero-actions">
+      <a href="#problema" class="btn-primary">Entender o Problema</a>
+      <a href="#tecnologia" class="btn-ghost">Ver a Tecnologia</a>
+    </div>
+
+    <div class="kpi-bar">
+      <div class="kpi-item">
+        <span class="kpi-value">72h</span>
+        <span class="kpi-label">antecedência de alerta</span>
+      </div>
+      <div class="kpi-sep"></div>
+      <div class="kpi-item">
+        <span class="kpi-value">US$ 2T</span>
+        <span class="kpi-label">em prejuízos evitados</span>
+      </div>
+      <div class="kpi-sep"></div>
+      <div class="kpi-item">
+        <span class="kpi-value">40+</span>
+        <span class="kpi-label">países protegidos</span>
+      </div>
+      <div class="kpi-sep"></div>
+      <div class="kpi-item">
+        <span class="kpi-value">ODS 9</span>
+        <span class="kpi-label">alinhado à ONU</span>
+      </div>
+    </div>
+
+    <div class="hero-orbit" aria-hidden="true">
+      <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="210" cy="210" r="200" stroke="rgba(0,212,255,0.07)" stroke-width="1"/>
+        <circle cx="210" cy="210" r="150" stroke="rgba(0,212,255,0.1)" stroke-width="1" stroke-dasharray="6 4"/>
+        <circle cx="210" cy="210" r="95"  stroke="rgba(0,212,255,0.15)" stroke-width="1.5"/>
+        <circle cx="210" cy="210" r="30"  fill="rgba(255,120,0,0.15)" stroke="rgba(255,120,0,0.6)" stroke-width="2"/>
+        <circle cx="210" cy="210" r="12"  fill="rgba(255,160,60,0.8)"/>
+        <g class="orbit-sat">
+          <circle cx="360" cy="210" r="5" fill="var(--ciano)"/>
+          <line x1="360" y1="205" x2="360" y2="200" stroke="var(--ciano)" stroke-width="1.2"/>
+          <line x1="355" y1="210" x2="350" y2="210" stroke="var(--ciano)" stroke-width="1.2"/>
+          <line x1="365" y1="210" x2="370" y2="210" stroke="var(--ciano)" stroke-width="1.2"/>
+        </g>
+        <line x1="340" y1="210" x2="240" y2="210" stroke="rgba(255,80,80,0.5)" stroke-width="1" stroke-dasharray="4 3"/>
+        <text x="290" y="204" fill="rgba(255,80,80,0.7)" font-size="8" font-family="Exo 2" text-anchor="middle">CME</text>
+        <polygon points="210,175 215,210 205,210" fill="var(--ciano)" opacity="0.8"/>
+        <rect x="208" y="210" width="4" height="14" fill="var(--ciano)" opacity="0.6"/>
+      </svg>
+    </div>
+  </section>
+
+  <section id="problema" class="section section-dark">
+    <div class="container">
+      <div class="section-tag">01 / Problema</div>
+      <h2 class="section-title">Uma ameaça invisível no céu</h2>
+      <div class="two-col">
+        <div class="col-text">
+          <p>
+            Ejeções de Massa Coronal (CMEs) lançam bilhões de toneladas de plasma
+            solar em direção à Terra. Ao atingir o campo magnético terrestre, geram
+            <strong>Correntes Induzidas Geomagneticamente (GICs)</strong> nas linhas
+            de transmissão de alta tensão — sobrecarregando transformadores com calor,
+            causando explosões e apagões em cascata.
+          </p>
+          <p>
+            Um evento como o <strong>Carrington de 1859</strong> hoje resultaria em
+            apagões simultâneos em mais de 40 países e prejuízos superiores a
+            <strong>US$ 2 trilhões</strong>. Hospitais, comunicações, transporte e
+            abastecimento de água seriam paralisados por meses.
+          </p>
+        </div>
+        <div class="col-visual">
+          <div class="problem-cards">
+            <div class="pcard pcard-red">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <path d="M16 3 L29 27 H3 Z" stroke="#ff4d4d" stroke-width="2" fill="rgba(255,77,77,0.1)"/>
+                <line x1="16" y1="12" x2="16" y2="20" stroke="#ff4d4d" stroke-width="2"/>
+                <circle cx="16" cy="23.5" r="1.2" fill="#ff4d4d"/>
+              </svg>
+              <span>Transformadores destruídos custam até <strong>US$ 10M</strong> cada</span>
+            </div>
+            <div class="pcard pcard-orange">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <circle cx="16" cy="16" r="12" stroke="#ff8c00" stroke-width="2" fill="rgba(255,140,0,0.1)"/>
+                <path d="M16 8 Q20 14 16 16 Q12 18 16 24" stroke="#ff8c00" stroke-width="2" fill="none"/>
+              </svg>
+              <span>Substituição leva <strong>18 meses</strong> em média</span>
+            </div>
+            <div class="pcard pcard-yellow">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <rect x="4" y="8" width="24" height="16" rx="2" stroke="#ffd700" stroke-width="2" fill="rgba(255,215,0,0.08)"/>
+                <line x1="4" y1="14" x2="28" y2="14" stroke="#ffd700" stroke-width="1" stroke-dasharray="3 2"/>
+                <circle cx="16" cy="20" r="2" fill="#ffd700"/>
+              </svg>
+              <span><strong>Sem aviso prévio</strong>, a rede não pode ser protegida a tempo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tecnologia" class="section section-mid">
+    <div class="container">
+      <div class="section-tag">02 / Tecnologia</div>
+      <h2 class="section-title">Da órbita ao disjuntor</h2>
+      <p class="section-intro">
+        O GridShield conecta dados satelitais a decisões automáticas na rede elétrica.
+        Quatro camadas tecnológicas atuam em sequência:
+      </p>
+
+      <div class="pipeline">
+        <div class="pipe-step">
+          <div class="pipe-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <circle cx="20" cy="20" r="18" stroke="var(--ciano)" stroke-width="1.5"/>
+              <circle cx="20" cy="20" r="8" stroke="var(--ciano)" stroke-width="1" stroke-dasharray="3 2"/>
+              <circle cx="20" cy="20" r="2.5" fill="var(--ciano)"/>
+              <line x1="20" y1="2" x2="20" y2="8" stroke="var(--ciano)" stroke-width="2"/>
+              <line x1="2" y1="20" x2="8" y2="20" stroke="var(--ciano)" stroke-width="2"/>
+              <line x1="32" y1="20" x2="38" y2="20" stroke="var(--ciano)" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Satélite DSCOVR</h3>
+          <p>NASA/NOAA no ponto Lagrangiano L1, a 1,5M km da Terra. Detecta CMEs com até 72h de antecedência.</p>
+          <div class="pipe-tag">API Espacial</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="pipe-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect x="6" y="10" width="28" height="20" rx="3" stroke="var(--ciano)" stroke-width="1.5" fill="rgba(0,212,255,0.05)"/>
+              <path d="M12 20 L17 15 L22 22 L26 18 L30 20" stroke="var(--ciano)" stroke-width="1.5" fill="none"/>
+            </svg>
+          </div>
+          <h3>Análise Matemática</h3>
+          <p>Modelos gaussianos, logarítmicos e de potência calculam velocidade do vento solar e Índice Kp em tempo real.</p>
+          <div class="pipe-tag">Python · Numpy</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="pipe-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <polygon points="20,5 35,32 5,32" stroke="var(--orange)" stroke-width="1.5" fill="rgba(255,120,0,0.08)"/>
+              <line x1="20" y1="14" x2="20" y2="23" stroke="var(--orange)" stroke-width="2"/>
+              <circle cx="20" cy="27" r="1.5" fill="var(--orange)"/>
+            </svg>
+          </div>
+          <h3>Alerta Inteligente</h3>
+          <p>O sistema cruza projeções com banco de subestações georreferenciadas e classifica o nível de risco por região.</p>
+          <div class="pipe-tag">Geolocalização</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="pipe-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect x="10" y="14" width="20" height="14" rx="2" stroke="#00ff88" stroke-width="1.5" fill="rgba(0,255,136,0.06)"/>
+              <line x1="20" y1="4" x2="20" y2="14" stroke="#00ff88" stroke-width="1.5"/>
+              <circle cx="20" cy="4" r="2.5" fill="#00ff88"/>
+              <line x1="14" y1="28" x2="14" y2="34" stroke="#00ff88" stroke-width="1.5"/>
+              <line x1="26" y1="28" x2="26" y2="34" stroke="#00ff88" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Isolamento Preventivo</h3>
+          <p>Subestações são desenergizadas antes do impacto. Após o pico, o religamento é coordenado pela telemetria satelital.</p>
+          <div class="pipe-tag">Automação</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="objetivos" class="section section-dark">
+    <div class="container">
+      <div class="section-tag">03 / Objetivos</div>
+      <h2 class="section-title">O que o GridShield se propõe a fazer</h2>
+      <div class="objectives-grid">
+        <div class="obj-card">
+          <div class="obj-number">01</div>
+          <h3>Detectar CMEs com antecedência</h3>
+          <p>Processar dados do satélite DSCOVR no ponto L1 para identificar ejeções de massa coronal até 72 horas antes do impacto.</p>
+        </div>
+        <div class="obj-card">
+          <div class="obj-number">02</div>
+          <h3>Modelar o risco geomagnético</h3>
+          <p>Calcular o Índice Kp projetado e estimar as Correntes Induzidas (GICs) por linha de transmissão usando funções matemáticas.</p>
+        </div>
+        <div class="obj-card">
+          <div class="obj-number">03</div>
+          <h3>Acionar planos de contingência</h3>
+          <p>Recomendar e executar o isolamento preventivo das subestações mais vulneráveis identificadas no banco georreferenciado.</p>
+        </div>
+        <div class="obj-card">
+          <div class="obj-number">04</div>
+          <h3>Coordenar a recuperação</h3>
+          <p>Monitorar o decaimento do campo geomagnético pós-pico e autorizar o religamento cadenciado da rede com segurança máxima.</p>
+        </div>
+        <div class="obj-card obj-card-wide">
+          <div class="obj-number">05</div>
+          <h3>Proteger infraestrutura crítica — alinhado à ODS 9</h3>
+          <p>Garantir a continuidade do abastecimento energético para populações, hospitais e sistemas essenciais, contribuindo para o Objetivo de Desenvolvimento Sustentável 9 da ONU: Indústria, Inovação e Infraestrutura resiliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publico" class="section section-mid">
+    <div class="container">
+      <div class="section-tag">04 / Público-alvo</div>
+      <h2 class="section-title">Quem protegemos</h2>
+      <p class="section-intro">
+        O GridShield é uma infraestrutura de software B2G e B2B
+        com impacto direto na população global.
+      </p>
+      <div class="audience-flex">
+        <div class="audience-card">
+          <div class="aud-img-wrap">
+            <img
+              src="images/operadoras-energia.jpg"
+              alt="Engenheiros elétricos trabalhando em subestação de alta tensão, monitorando o funcionamento do sistema de geração de energia"
+            />
+            <div class="aud-img-overlay"></div>
+          </div>
+          <div class="aud-body">
+            <h3>Operadoras de Energia</h3>
+            <p>Concessionárias e operadores de redes de transmissão que precisam proteger transformadores de alta potência e garantir a continuidade do serviço.</p>
+            <div class="aud-tag">Usuário principal</div>
+          </div>
+        </div>
+        <div class="audience-card">
+          <div class="aud-img-wrap">
+            <img
+              src="images/governos-agencias.jpg"
+              alt="Bandeira do Brasil hasteada representando órgãos governamentais e agências nacionais responsáveis por políticas de energia e defesa civil"
+            />
+            <div class="aud-img-overlay"></div>
+          </div>
+          <div class="aud-body">
+            <h3>Governos e Agências</h3>
+            <p>Ministérios de energia, defesa civil e agências espaciais que necessitam de planos nacionais de resiliência para eventos de clima espacial extremo.</p>
+            <div class="aud-tag">Regulador</div>
+          </div>
+        </div>
+        <div class="audience-card">
+          <div class="aud-img-wrap">
+            <img
+              src="images/servicos-essenciais.jpg"
+              alt="Hospital e serviços essenciais que dependem de fornecimento contínuo de energia elétrica para funcionamento ininterrupto"
+            />
+            <div class="aud-img-overlay"></div>
+          </div>
+          <div class="aud-body">
+            <h3>Serviços Essenciais</h3>
+            <p>Hospitais, sistemas de água, comunicações e transporte que dependem de energia ininterrupta e são os mais impactados por apagões prolongados.</p>
+            <div class="aud-tag">Beneficiário direto</div>
+          </div>
+        </div>
+        <div class="audience-card">
+          <div class="aud-img-wrap">
+            <img
+              src="images/pesquisadores-cientistas.jpg"
+              alt="Pesquisadores científicos trabalhando em laboratório moderno, analisando dados e conduzindo experimentos de clima espacial"
+            />
+            <div class="aud-img-overlay"></div>
+          </div>
+          <div class="aud-body">
+            <h3>Pesquisadores e Cientistas</h3>
+            <p>Geofísicos, engenheiros elétricos e cientistas espaciais que utilizam os dados modelados para aprimorar a compreensão do clima espacial.</p>
+            <div class="aud-tag">Parceiro científico</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios" class="section section-dark">
+    <div class="container">
+      <div class="section-tag">05 / Benefícios</div>
+      <h2 class="section-title">Por que o GridShield importa</h2>
+      <div class="benefits-layout">
+        <div class="benefit-big">
+          <div class="benefit-big-inner">
+            <span class="benefit-number">US$ 2T</span>
+            <span class="benefit-desc">em perdas econômicas que podem ser evitadas por evento</span>
+          </div>
+        </div>
+        <div class="benefits-list">
+          <div class="ben-item">
+            <div class="ben-check">✓</div>
+            <div>
+              <h4>Zero novos equipamentos físicos</h4>
+              <p>Solução puramente em software — sem custo de hardware adicional para as operadoras.</p>
+            </div>
+          </div>
+          <div class="ben-item">
+            <div class="ben-check">✓</div>
+            <div>
+              <h4>Proteção de populações vulneráveis</h4>
+              <p>Manutenção de serviços essenciais em hospitais e zonas de emergência durante eventos extremos.</p>
+            </div>
+          </div>
+          <div class="ben-item">
+            <div class="ben-check">✓</div>
+            <div>
+              <h4>Uso de dados orbitais abertos</h4>
+              <p>APIs públicas da NASA, NOAA e ESA — sem dependência de fontes proprietárias pagas.</p>
+            </div>
+          </div>
+          <div class="ben-item">
+            <div class="ben-check">✓</div>
+            <div>
+              <h4>Decisão baseada em ciência</h4>
+              <p>Modelos matemáticos validados (gaussiana, logarítmica, potência, exponencial) para alta precisão.</p>
+            </div>
+          </div>
+          <div class="ben-item">
+            <div class="ben-check">✓</div>
+            <div>
+              <h4>Recuperação coordenada e segura</h4>
+              <p>O religamento pós-tempestade é guiado por telemetria — sem risco de novo dano ao religar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="aplicacao" class="section section-mid">
+    <div class="container">
+      <div class="section-tag">06 / Aplicação no dia a dia</div>
+      <h2 class="section-title">Como funciona na prática</h2>
+      <p class="section-intro">
+        Do alerta orbital ao religamento da rede — o GridShield atua em três fases distintas:
+      </p>
+      <div class="timeline">
+        <div class="tl-step">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <div class="tl-label">Fase 1 — Detecção</div>
+            <h3>O satélite DSCOVR registra a CME</h3>
+            <p>O sensor no ponto L1 detecta o aumento anômalo da velocidade do vento solar. O GridShield recebe os dados via API e inicia o cálculo do Índice Kp projetado.</p>
+            <div class="tl-meta">⏱ Até 72h antes do impacto</div>
+          </div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-dot tl-dot-warn"></div>
+          <div class="tl-content">
+            <div class="tl-label">Fase 2 — Alerta e Isolamento</div>
+            <h3>A rede é protegida antes do impacto</h3>
+            <p>Com Kp previsto acima de 7, o sistema envia alertas às operadoras e recomenda o isolamento preventivo das subestações vulneráveis mapeadas no banco georreferenciado.</p>
+            <div class="tl-meta">⚡ Horas antes da chegada da CME</div>
+          </div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-dot tl-dot-ok"></div>
+          <div class="tl-content">
+            <div class="tl-label">Fase 3 — Recuperação</div>
+            <h3>A rede é religada com segurança</h3>
+            <p>Após o pico da tempestade, o decaimento exponencial do Kp é monitorado. Quando Kp cai abaixo de 4, o GridShield coordena o religamento cadenciado, região por região.</p>
+            <div class="tl-meta">✅ Normalização em 6–24h após o pico</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">GridShield</span>
+        <span class="footer-tagline">Proteção orbital para redes elétricas terrestres.</span>
+        <div class="footer-ods">
+          <span class="ods-badge">ODS 9</span>
+          Alinhado à Agenda 2030 da ONU
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#problema">Problema</a>
+        <a href="#tecnologia">Tecnologia</a>
+        <a href="#objetivos">Objetivos</a>
+        <a href="#publico">Público-alvo</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#aplicacao">Aplicação</a>
+      </div>
+      <div class="footer-team">
+        <p class="footer-team-title">Integrantes</p>
+        <p>Michel Tatsuya Hanada &middot; RM 571987</p>
+        <p>Marcos Vinicius Serafim Tudisco Mendes &middot; RM 569366</p>
+        <p>Felipe Ilek Felice &middot; RM 571322</p>
+        <p class="footer-course">FIAP · Engenharia de Software · 1º Ano · 2026</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 GridShield · FIAP Global Solution · Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
