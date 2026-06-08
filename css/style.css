@@ -1031,3 +1031,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .slide-btn:hover { background: var(--ciano); color: var(--bg); transform: translateY(-50%) scale(1.08); }
 .slide-prev { left: 14px; }
 .slide-next { right: 14px; }
+
+.slide-dots {
+  position: absolute;
+  bottom: 14px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 8px; z-index: 2;
+}
+.dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.dot.active { background: var(--ciano); transform: scale(1.3); }
