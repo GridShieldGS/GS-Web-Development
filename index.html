@@ -506,5 +506,63 @@
     </div>
   </footer>
 
+  <section id="quiz" class="section section-dark">
+    <div class="container">
+      <div class="section-tag">09 / Quiz</div>
+      <h2 class="section-title">Teste seus conhecimentos</h2>
+      <p class="section-intro">10 perguntas sobre clima espacial, tempestades geomagnéticas e o GridShield.</p>
+      <div class="quiz-box" id="quizBox">
+        <div class="quiz-progress">
+          <span id="quizCounter">Pergunta 1 de 10</span>
+          <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizFill"></div></div>
+        </div>
+        <div id="quizQuestion" class="quiz-question"></div>
+        <div id="quizOptions" class="quiz-options"></div>
+        <button class="btn-primary quiz-next-btn" id="quizNext" style="display:none">Próxima →</button>
+      </div>
+      <div class="quiz-result" id="quizResult" style="display:none">
+        <div class="result-icon" id="resultIcon"></div>
+        <h3 id="resultTitle"></h3>
+        <p id="resultMsg"></p>
+        <p class="result-score" id="resultScore"></p>
+        <button class="btn-primary" id="quizRestart">Tentar novamente</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section section-mid">
+    <div class="container">
+      <div class="section-tag">10 / Contato</div>
+      <h2 class="section-title">Fale com a equipe</h2>
+      <p class="section-intro">Preencha o formulário e entraremos em contato em breve.</p>
+      <div class="form-wrap">
+        <div class="form-group">
+          <label for="inputNome">Nome completo</label>
+          <input type="text" id="inputNome" placeholder="Seu nome" />
+          <span class="form-error" id="erroNome"></span>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">E-mail</label>
+          <input type="text" id="inputEmail" placeholder="seu@email.com" />
+          <span class="form-error" id="erroEmail"></span>
+        </div>
+        <div class="form-group">
+          <label for="inputOrg">Organização</label>
+          <input type="text" id="inputOrg" placeholder="Empresa ou instituição" />
+          <span class="form-error" id="erroOrg"></span>
+        </div>
+        <div class="form-group">
+          <label for="inputMsg">Mensagem</label>
+          <textarea id="inputMsg" rows="4" placeholder="Como podemos ajudar?"></textarea>
+          <span class="form-error" id="erroMsg"></span>
+        </div>
+        <button class="btn-primary" id="formSubmit">Enviar mensagem</button>
+        <div class="form-success" id="formSuccess" style="display:none">
+          ✅ Mensagem enviada com sucesso! Entraremos em contato em breve.
+        </div>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
