@@ -289,3 +289,83 @@
   });
   mostrarPergunta(0);
 })();
+
+(function iniciarFormulario() {
+  var submitBtn = document.getElementById("formSubmit");
+  if (!submitBtn) return;
+  var campos = {
+    nome: {
+      input: document.getElementById("inputNome"),
+      erro: document.getElementById("erroNome"),
+    },
+    email: {
+      input: document.getElementById("inputEmail"),
+      erro: document.getElementById("erroEmail"),
+    },
+    org: {
+      input: document.getElementById("inputOrg"),
+      erro: document.getElementById("erroOrg"),
+    },
+    msg: {
+      input: document.getElementById("inputMsg"),
+      erro: document.getElementById("erroMsg"),
+    },
+  };
+  var successBox = document.getElementById("formSuccess");
+  function limparErro(campo) {
+    campos[campo].erro.textContent = "";
+    campos[campo].input.classList.remove("input-erro");
+  }
+  function marcarErro(campo, mensagem) {
+    campos[campo].erro.textContent = mensagem;
+    campos[campo].input.classList.add("input-erro");
+  }
+  function validarEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+  Object.keys(campos).forEach(function (k) {
+    campos[k].input.addEventListener("input", function () {
+      limparErro(k);
+    });
+  });
+  submitBtn.addEventListener("click", function () {
+    var valido = true;
+    successBox.style.display = "none";
+    Object.keys(campos).forEach(function (k) {
+      limparErro(k);
+    });
+    var nome = campos.nome.input.value.trim();
+    var email = campos.email.input.value.trim();
+    var org = campos.org.input.value.trim();
+    var msg = campos.msg.input.value.trim();
+    if (!nome) {
+      marcarErro("nome", "Por favor, informe seu nome completo.");
+      valido = false;
+    }
+    if (!email) {
+      marcarErro("email", "Por favor, informe seu e-mail.");
+      valido = false;
+    } else if (!validarEmail(email)) {
+      marcarErro("email", "Informe um e-mail válido (ex: nome@dominio.com).");
+      valido = false;
+    }
+    if (!org) {
+      marcarErro("org", "Por favor, informe sua organização.");
+      valido = false;
+    }
+    if (!msg) {
+      marcarErro("msg", "Por favor, escreva sua mensagem.");
+      valido = false;
+    } else if (msg.length < 10) {
+      marcarErro("msg", "A mensagem deve ter pelo menos 10 caracteres.");
+      valido = false;
+    }
+    if (valido) {
+      campos.nome.input.value = "";
+      campos.email.input.value = "";
+      campos.org.input.value = "";
+      campos.msg.input.value = "";
+      successBox.style.display = "block";
+    }
+  });
+})();
