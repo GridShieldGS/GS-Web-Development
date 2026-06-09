@@ -1,62 +1,44 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
+html { scroll-behavior: smooth; font-size: 16px; }
 body {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
   line-height: 1.6;
 }
-ul {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-img {
-  max-width: 100%;
-  display: block;
-}
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
-}
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
 :root {
-  --bg: #050d1a;
-  --bg-mid: #080f20;
-  --bg-card: #0c1730;
-  --bg-card2: #0e1c38;
-  --border: rgba(0, 212, 255, 0.12);
+  --bg:          #050d1a;
+  --bg-mid:      #080f20;
+  --bg-card:     #0c1730;
+  --bg-card2:    #0e1c38;
+  --border:      rgba(0, 212, 255, 0.12);
   --border-glow: rgba(0, 212, 255, 0.35);
 
-  --ciano: #00d4ff;
-  --ciano-dim: rgba(0, 212, 255, 0.18);
-  --orange: #ff7800;
-  --orange-dim: rgba(255, 120, 0, 0.15);
-  --green: #00ff88;
-  --red: #ff4d4d;
-  --yellow: #ffd700;
+  --ciano:       #00d4ff;
+  --ciano-dim:   rgba(0, 212, 255, 0.18);
+  --orange:      #ff7800;
+  --orange-dim:  rgba(255, 120, 0, 0.15);
+  --green:       #00ff88;
+  --red:         #ff4d4d;
+  --yellow:      #ffd700;
 
-  --text: #cfe2f3;
-  --text-muted: rgba(180, 210, 240, 0.55);
+  --text:        #cfe2f3;
+  --text-muted:  rgba(180, 210, 240, 0.55);
   --text-bright: #ffffff;
 
-  --nav-h: 68px;
-  --radius: 10px;
-  --radius-lg: 18px;
+  --nav-h:       68px;
+  --radius:      10px;
+  --radius-lg:   18px;
 
   --shadow-card: 0 4px 32px rgba(0, 0, 0, 0.55);
   --shadow-glow: 0 0 24px rgba(0, 212, 255, 0.12);
@@ -64,10 +46,8 @@ button {
 
 .starfield {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
@@ -82,81 +62,21 @@ button {
 
 .stars-sm {
   background-image:
-    radial-gradient(
-      1px 1px at 10% 15%,
-      rgba(180, 220, 255, 0.7) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 25% 60%,
-      rgba(180, 220, 255, 0.5) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 40% 30%,
-      rgba(180, 220, 255, 0.6) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 55% 80%,
-      rgba(180, 220, 255, 0.4) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 70% 10%,
-      rgba(180, 220, 255, 0.6) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 80% 50%,
-      rgba(180, 220, 255, 0.5) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 90% 25%,
-      rgba(180, 220, 255, 0.7) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 15% 90%,
-      rgba(180, 220, 255, 0.4) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 35% 45%,
-      rgba(180, 220, 255, 0.5) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 60% 65%,
-      rgba(180, 220, 255, 0.6) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 75% 35%,
-      rgba(180, 220, 255, 0.4) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 5% 55%,
-      rgba(180, 220, 255, 0.5) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 48% 5%,
-      rgba(180, 220, 255, 0.7) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 92% 75%,
-      rgba(180, 220, 255, 0.5) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1px 1px at 20% 20%,
-      rgba(180, 220, 255, 0.6) 0%,
-      transparent 100%
-    );
+    radial-gradient(1px 1px at 10% 15%, rgba(180,220,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 60%, rgba(180,220,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 40% 30%, rgba(180,220,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 80%, rgba(180,220,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 10%, rgba(180,220,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 50%, rgba(180,220,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 25%, rgba(180,220,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 90%, rgba(180,220,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 45%, rgba(180,220,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 65%, rgba(180,220,255,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 35%, rgba(180,220,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 5%  55%, rgba(180,220,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 48% 5%,  rgba(180,220,255,0.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 92% 75%, rgba(180,220,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 20% 20%, rgba(180,220,255,0.6) 0%, transparent 100%);
   background-size: 400px 400px;
   animation-duration: 120s;
   opacity: 0.8;
@@ -164,46 +84,14 @@ button {
 
 .stars-md {
   background-image:
-    radial-gradient(
-      1.5px 1.5px at 18% 40%,
-      rgba(180, 220, 255, 0.6) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1.5px 1.5px at 38% 72%,
-      rgba(180, 220, 255, 0.5) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1.5px 1.5px at 62% 18%,
-      rgba(180, 220, 255, 0.7) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1.5px 1.5px at 78% 58%,
-      rgba(180, 220, 255, 0.4) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1.5px 1.5px at 88% 88%,
-      rgba(180, 220, 255, 0.6) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1.5px 1.5px at 8% 28%,
-      rgba(180, 220, 255, 0.5) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1.5px 1.5px at 50% 50%,
-      rgba(180, 220, 255, 0.4) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      1.5px 1.5px at 30% 10%,
-      rgba(180, 220, 255, 0.6) 0%,
-      transparent 100%
-    );
+    radial-gradient(1.5px 1.5px at 18% 40%, rgba(180,220,255,0.6) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 38% 72%, rgba(180,220,255,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 62% 18%, rgba(180,220,255,0.7) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 78% 58%, rgba(180,220,255,0.4) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 88% 88%, rgba(180,220,255,0.6) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 8%  28%, rgba(180,220,255,0.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 50% 50%, rgba(180,220,255,0.4) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 30% 10%, rgba(180,220,255,0.6) 0%, transparent 100%);
   background-size: 600px 600px;
   animation-duration: 90s;
   opacity: 0.6;
@@ -211,36 +99,12 @@ button {
 
 .stars-lg {
   background-image:
-    radial-gradient(
-      2px 2px at 22% 33%,
-      rgba(200, 230, 255, 0.8) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      2px 2px at 55% 66%,
-      rgba(200, 230, 255, 0.7) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      2px 2px at 77% 22%,
-      rgba(200, 230, 255, 0.9) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      2px 2px at 11% 77%,
-      rgba(200, 230, 255, 0.6) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      2px 2px at 88% 44%,
-      rgba(200, 230, 255, 0.8) 0%,
-      transparent 100%
-    ),
-    radial-gradient(
-      2px 2px at 44% 88%,
-      rgba(200, 230, 255, 0.7) 0%,
-      transparent 100%
-    );
+    radial-gradient(2px 2px at 22% 33%, rgba(200,230,255,0.8) 0%, transparent 100%),
+    radial-gradient(2px 2px at 55% 66%, rgba(200,230,255,0.7) 0%, transparent 100%),
+    radial-gradient(2px 2px at 77% 22%, rgba(200,230,255,0.9) 0%, transparent 100%),
+    radial-gradient(2px 2px at 11% 77%, rgba(200,230,255,0.6) 0%, transparent 100%),
+    radial-gradient(2px 2px at 88% 44%, rgba(200,230,255,0.8) 0%, transparent 100%),
+    radial-gradient(2px 2px at 44% 88%, rgba(200,230,255,0.7) 0%, transparent 100%);
   background-size: 800px 800px;
   animation-duration: 60s;
   animation-name: twinkleStars;
@@ -248,31 +112,18 @@ button {
 }
 
 @keyframes moveStars {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-400px);
-  }
+  from { transform: translateY(0); }
+  to   { transform: translateY(-400px); }
 }
 
 @keyframes twinkleStars {
-  0%,
-  100% {
-    opacity: 0.5;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 0.9;
-    transform: translateY(-400px);
-  }
+  0%, 100% { opacity: 0.5; transform: translateY(0); }
+  50%       { opacity: 0.9; transform: translateY(-400px); }
 }
 
 #navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: var(--nav-h);
   z-index: 100;
   background: rgba(5, 13, 26, 0.85);
@@ -294,19 +145,14 @@ button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 800;
   font-size: 1.25rem;
   color: var(--text-bright);
   letter-spacing: 0.02em;
 }
-.nav-logo span {
-  color: var(--ciano);
-}
-.logo-icon {
-  display: flex;
-  align-items: center;
-}
+.nav-logo span { color: var(--ciano); }
+.logo-icon { display: flex; align-items: center; }
 
 .nav-links {
   display: flex;
@@ -319,9 +165,7 @@ button {
   font-weight: 400;
   color: var(--text-muted);
   border-radius: 6px;
-  transition:
-    color 0.2s,
-    background 0.2s;
+  transition: color 0.2s, background 0.2s;
 }
 .nav-links a:hover {
   color: var(--ciano);
@@ -335,11 +179,9 @@ button {
   color: var(--ciano);
   font-size: 0.88rem;
   font-weight: 600;
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   letter-spacing: 0.04em;
-  transition:
-    background 0.2s,
-    color 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 .nav-cta:hover {
   background: var(--ciano);
@@ -360,22 +202,20 @@ button {
 }
 
 #hero::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
   background-size: 48px 48px;
   pointer-events: none;
 }
 
 #hero::after {
-  content: "";
+  content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 0; left: 0; right: 0;
   height: 220px;
   background: linear-gradient(to bottom, transparent, var(--bg));
   pointer-events: none;
@@ -397,26 +237,18 @@ button {
 }
 
 .pulse-dot {
-  width: 8px;
-  height: 8px;
+  width: 8px; height: 8px;
   border-radius: 50%;
   background: var(--green);
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-    box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.5);
-  }
-  50% {
-    opacity: 0.7;
-    box-shadow: 0 0 0 5px rgba(0, 255, 136, 0);
-  }
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(0,255,136,0.5); }
+  50%       { opacity: 0.7; box-shadow: 0 0 0 5px rgba(0,255,136,0); }
 }
 
 .hero-title {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 900;
   font-size: clamp(2.4rem, 5.5vw, 4rem);
   line-height: 1.1;
@@ -452,13 +284,11 @@ button {
   background: var(--ciano);
   color: var(--bg);
   border-radius: var(--radius);
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.04em;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .btn-primary:hover {
   transform: translateY(-2px);
@@ -470,14 +300,11 @@ button {
   border: 1.5px solid var(--border-glow);
   color: var(--text);
   border-radius: var(--radius);
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.04em;
-  transition:
-    border-color 0.2s,
-    color 0.2s,
-    background 0.2s;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 .btn-ghost:hover {
   border-color: var(--ciano);
@@ -506,7 +333,7 @@ button {
   gap: 0.25rem;
 }
 .kpi-value {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 800;
   font-size: 1.6rem;
   color: var(--ciano);
@@ -534,36 +361,21 @@ button {
   animation: floatOrbit 8s ease-in-out infinite;
 }
 @keyframes floatOrbit {
-  0%,
-  100% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(calc(-50% - 12px));
-  }
+  0%, 100% { transform: translateY(-50%); }
+  50%       { transform: translateY(calc(-50% - 12px)); }
 }
 .orbit-sat {
   transform-origin: 210px 210px;
   animation: rotateSat 12s linear infinite;
 }
 @keyframes rotateSat {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 @keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-14px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(-14px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .section {
@@ -571,12 +383,8 @@ button {
   z-index: 1;
   padding: 6rem 2rem;
 }
-.section-dark {
-  background: var(--bg);
-}
-.section-mid {
-  background: var(--bg-mid);
-}
+.section-dark { background: var(--bg); }
+.section-mid  { background: var(--bg-mid); }
 
 .container {
   max-width: 1100px;
@@ -584,7 +392,7 @@ button {
 }
 
 .section-tag {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -594,7 +402,7 @@ button {
 }
 
 .section-title {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 800;
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   color: var(--text-bright);
@@ -626,13 +434,8 @@ button {
   font-size: 1rem;
   line-height: 1.75;
 }
-.col-text strong {
-  color: var(--text);
-  font-weight: 600;
-}
-.col-visual {
-  flex: 1;
-}
+.col-text strong { color: var(--text); font-weight: 600; }
+.col-visual { flex: 1; }
 
 .problem-cards {
   display: flex;
@@ -650,23 +453,11 @@ button {
   font-size: 0.92rem;
   color: var(--text-muted);
 }
-.pcard strong {
-  color: var(--text);
-  font-weight: 600;
-}
-.pcard svg {
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-.pcard-red {
-  border-color: var(--red);
-}
-.pcard-orange {
-  border-color: var(--orange);
-}
-.pcard-yellow {
-  border-color: var(--yellow);
-}
+.pcard strong { color: var(--text); font-weight: 600; }
+.pcard svg { flex-shrink: 0; margin-top: 2px; }
+.pcard-red    { border-color: var(--red); }
+.pcard-orange { border-color: var(--orange); }
+.pcard-yellow { border-color: var(--yellow); }
 
 .pipeline {
   display: flex;
@@ -683,10 +474,7 @@ button {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  transition:
-    border-color 0.3s,
-    box-shadow 0.3s,
-    transform 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 .pipe-step:hover {
   border-color: var(--border-glow);
@@ -694,8 +482,7 @@ button {
   transform: translateY(-4px);
 }
 .pipe-icon {
-  width: 70px;
-  height: 70px;
+  width: 70px; height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -705,7 +492,7 @@ button {
   margin-bottom: 1.1rem;
 }
 .pipe-step h3 {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--text-bright);
@@ -718,7 +505,7 @@ button {
   margin-bottom: 1rem;
 }
 .pipe-tag {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -750,9 +537,7 @@ button {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  transition:
-    border-color 0.3s,
-    box-shadow 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
   position: relative;
 }
 .obj-card:hover {
@@ -764,15 +549,12 @@ button {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), var(--bg-card));
+  background: linear-gradient(135deg, rgba(0,212,255,0.05), var(--bg-card));
   border-color: var(--border-glow);
 }
-.obj-card-wide .obj-number {
-  font-size: 2.2rem;
-  flex-shrink: 0;
-}
+.obj-card-wide .obj-number { font-size: 2.2rem; flex-shrink: 0; }
 .obj-number {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 900;
   font-size: 2.8rem;
   line-height: 1;
@@ -780,7 +562,7 @@ button {
   margin-bottom: 0.6rem;
 }
 .obj-card h3 {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--text-bright);
@@ -806,10 +588,7 @@ button {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   gap: 0.8rem;
-  transition:
-    border-color 0.3s,
-    box-shadow 0.3s,
-    transform 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 .audience-card:hover {
   border-color: var(--border-glow);
@@ -817,8 +596,7 @@ button {
   transform: translateY(-3px);
 }
 .aud-icon {
-  width: 60px;
-  height: 60px;
+  width: 60px; height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -827,7 +605,7 @@ button {
   border-radius: 12px;
 }
 .audience-card h3 {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 0.97rem;
   color: var(--text-bright);
@@ -839,7 +617,7 @@ button {
   flex: 1;
 }
 .aud-tag {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.07em;
@@ -865,24 +643,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle, rgba(0, 212, 255, 0.08), transparent 70%);
-  box-shadow:
-    0 0 60px rgba(0, 212, 255, 0.12),
-    inset 0 0 40px rgba(0, 212, 255, 0.04);
+  background: radial-gradient(circle, rgba(0,212,255,0.08), transparent 70%);
+  box-shadow: 0 0 60px rgba(0, 212, 255, 0.12), inset 0 0 40px rgba(0,212,255,0.04);
   animation: pulseBig 4s ease-in-out infinite;
 }
 @keyframes pulseBig {
-  0%,
-  100% {
-    box-shadow:
-      0 0 60px rgba(0, 212, 255, 0.12),
-      inset 0 0 40px rgba(0, 212, 255, 0.04);
-  }
-  50% {
-    box-shadow:
-      0 0 90px rgba(0, 212, 255, 0.22),
-      inset 0 0 50px rgba(0, 212, 255, 0.08);
-  }
+  0%, 100% { box-shadow: 0 0 60px rgba(0,212,255,0.12), inset 0 0 40px rgba(0,212,255,0.04); }
+  50%       { box-shadow: 0 0 90px rgba(0,212,255,0.22), inset 0 0 50px rgba(0,212,255,0.08); }
 }
 .benefit-big-inner {
   display: flex;
@@ -892,7 +659,7 @@ button {
   padding: 1.5rem;
 }
 .benefit-number {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 900;
   font-size: 2.2rem;
   color: var(--ciano);
@@ -919,9 +686,7 @@ button {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition:
-    border-color 0.25s,
-    background 0.25s;
+  transition: border-color 0.25s, background 0.25s;
 }
 .ben-item:hover {
   border-color: var(--green);
@@ -929,8 +694,7 @@ button {
 }
 .ben-check {
   flex-shrink: 0;
-  width: 26px;
-  height: 26px;
+  width: 26px; height: 26px;
   border-radius: 50%;
   background: rgba(0, 255, 136, 0.12);
   border: 1px solid var(--green);
@@ -943,7 +707,7 @@ button {
   margin-top: 2px;
 }
 .ben-item h4 {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   color: var(--text-bright);
@@ -967,31 +731,22 @@ button {
   position: relative;
   padding: 0 0 2.5rem 2.5rem;
 }
-.tl-step:last-child {
-  padding-bottom: 0;
-}
+.tl-step:last-child { padding-bottom: 0; }
 .tl-dot {
   position: absolute;
   left: -2.55rem;
   top: 0.3rem;
-  width: 14px;
-  height: 14px;
+  width: 14px; height: 14px;
   border-radius: 50%;
   background: var(--ciano);
   border: 2px solid var(--bg);
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+  box-shadow: 0 0 10px rgba(0,212,255,0.6);
 }
-.tl-dot-warn {
-  background: var(--orange);
-  box-shadow: 0 0 10px rgba(255, 120, 0, 0.6);
-}
-.tl-dot-ok {
-  background: var(--green);
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
-}
+.tl-dot-warn { background: var(--orange); box-shadow: 0 0 10px rgba(255,120,0,0.6); }
+.tl-dot-ok   { background: var(--green);  box-shadow: 0 0 10px rgba(0,255,136,0.6); }
 
 .tl-label {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -1000,7 +755,7 @@ button {
   margin-bottom: 0.4rem;
 }
 .tl-content h3 {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 1.15rem;
   color: var(--text-bright);
@@ -1042,7 +797,7 @@ button {
   gap: 0.6rem;
 }
 .footer-logo {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 900;
   font-size: 1.5rem;
   color: var(--ciano);
@@ -1062,10 +817,10 @@ button {
 .ods-badge {
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
-  background: rgba(0, 212, 255, 0.12);
+  background: rgba(0,212,255,0.12);
   border: 1px solid var(--border-glow);
   color: var(--ciano);
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 0.78rem;
   letter-spacing: 0.05em;
@@ -1080,9 +835,7 @@ button {
   color: var(--text-muted);
   transition: color 0.2s;
 }
-.footer-links a:hover {
-  color: var(--ciano);
-}
+.footer-links a:hover { color: var(--ciano); }
 
 .footer-team {
   display: flex;
@@ -1090,7 +843,7 @@ button {
   gap: 0.3rem;
 }
 .footer-team-title {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 0.82rem;
   letter-spacing: 0.1em;
@@ -1105,7 +858,7 @@ button {
 .footer-course {
   margin-top: 0.4rem;
   font-size: 0.78rem !important;
-  color: rgba(180, 210, 240, 0.35) !important;
+  color: rgba(180,210,240,0.35) !important;
 }
 
 .footer-bottom {
@@ -1113,120 +866,53 @@ button {
   margin: 0 auto;
   padding: 1.2rem 0;
   font-size: 0.78rem;
-  color: rgba(180, 210, 240, 0.3);
+  color: rgba(180,210,240,0.3);
   text-align: center;
 }
 
-.pipe-step,
-.obj-card,
-.audience-card,
-.ben-item,
-.tl-step,
-.pcard,
-.kpi-item {
+.pipe-step, .obj-card, .audience-card,
+.ben-item, .tl-step, .pcard, .kpi-item {
   animation: fadeUp 0.6s ease both;
 }
 
-.pipe-step:nth-child(1) {
-  animation-delay: 0.05s;
-}
-.pipe-step:nth-child(3) {
-  animation-delay: 0.15s;
-}
-.pipe-step:nth-child(5) {
-  animation-delay: 0.25s;
-}
-.pipe-step:nth-child(7) {
-  animation-delay: 0.35s;
-}
+.pipe-step:nth-child(1)     { animation-delay: 0.05s; }
+.pipe-step:nth-child(3)     { animation-delay: 0.15s; }
+.pipe-step:nth-child(5)     { animation-delay: 0.25s; }
+.pipe-step:nth-child(7)     { animation-delay: 0.35s; }
 
-.obj-card:nth-child(1) {
-  animation-delay: 0.05s;
-}
-.obj-card:nth-child(2) {
-  animation-delay: 0.12s;
-}
-.obj-card:nth-child(3) {
-  animation-delay: 0.19s;
-}
-.obj-card:nth-child(4) {
-  animation-delay: 0.26s;
-}
-.obj-card:nth-child(5) {
-  animation-delay: 0.33s;
-}
+.obj-card:nth-child(1)      { animation-delay: 0.05s; }
+.obj-card:nth-child(2)      { animation-delay: 0.12s; }
+.obj-card:nth-child(3)      { animation-delay: 0.19s; }
+.obj-card:nth-child(4)      { animation-delay: 0.26s; }
+.obj-card:nth-child(5)      { animation-delay: 0.33s; }
 
-.audience-card:nth-child(1) {
-  animation-delay: 0.05s;
-}
-.audience-card:nth-child(2) {
-  animation-delay: 0.13s;
-}
-.audience-card:nth-child(3) {
-  animation-delay: 0.21s;
-}
-.audience-card:nth-child(4) {
-  animation-delay: 0.29s;
-}
+.audience-card:nth-child(1) { animation-delay: 0.05s; }
+.audience-card:nth-child(2) { animation-delay: 0.13s; }
+.audience-card:nth-child(3) { animation-delay: 0.21s; }
+.audience-card:nth-child(4) { animation-delay: 0.29s; }
 
-.pcard:nth-child(1) {
-  animation-delay: 0.05s;
-}
-.pcard:nth-child(2) {
-  animation-delay: 0.15s;
-}
-.pcard:nth-child(3) {
-  animation-delay: 0.25s;
-}
+.pcard:nth-child(1)         { animation-delay: 0.05s; }
+.pcard:nth-child(2)         { animation-delay: 0.15s; }
+.pcard:nth-child(3)         { animation-delay: 0.25s; }
 
-.ben-item:nth-child(1) {
-  animation-delay: 0.03s;
-}
-.ben-item:nth-child(2) {
-  animation-delay: 0.09s;
-}
-.ben-item:nth-child(3) {
-  animation-delay: 0.15s;
-}
-.ben-item:nth-child(4) {
-  animation-delay: 0.21s;
-}
-.ben-item:nth-child(5) {
-  animation-delay: 0.27s;
-}
+.ben-item:nth-child(1)      { animation-delay: 0.03s; }
+.ben-item:nth-child(2)      { animation-delay: 0.09s; }
+.ben-item:nth-child(3)      { animation-delay: 0.15s; }
+.ben-item:nth-child(4)      { animation-delay: 0.21s; }
+.ben-item:nth-child(5)      { animation-delay: 0.27s; }
 
-.tl-step:nth-child(1) {
-  animation-delay: 0.05s;
-}
-.tl-step:nth-child(2) {
-  animation-delay: 0.18s;
-}
-.tl-step:nth-child(3) {
-  animation-delay: 0.31s;
-}
+.tl-step:nth-child(1)       { animation-delay: 0.05s; }
+.tl-step:nth-child(2)       { animation-delay: 0.18s; }
+.tl-step:nth-child(3)       { animation-delay: 0.31s; }
 
-.kpi-item:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.kpi-item:nth-child(3) {
-  animation-delay: 0.2s;
-}
-.kpi-item:nth-child(5) {
-  animation-delay: 0.3s;
-}
-.kpi-item:nth-child(7) {
-  animation-delay: 0.4s;
-}
+.kpi-item:nth-child(1)      { animation-delay: 0.10s; }
+.kpi-item:nth-child(3)      { animation-delay: 0.20s; }
+.kpi-item:nth-child(5)      { animation-delay: 0.30s; }
+.kpi-item:nth-child(7)      { animation-delay: 0.40s; }
 
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .audience-card {
@@ -1274,7 +960,7 @@ button {
 }
 
 .aud-body h3 {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 700;
   font-size: 0.97rem;
   color: var(--text-bright);
@@ -1301,11 +987,7 @@ button {
   border: 1px solid var(--border);
 }
 
-.slideshow {
-  position: relative;
-  width: 100%;
-  height: 420px;
-}
+.slideshow { position: relative; width: 100%; height: 420px; }
 
 .slide {
   position: absolute;
@@ -1313,9 +995,7 @@ button {
   opacity: 0;
   transition: opacity 0.6s ease;
 }
-.slide.active {
-  opacity: 1;
-}
+.slide.active { opacity: 1; }
 
 .slide img {
   width: 100%;
@@ -1326,11 +1006,9 @@ button {
 
 .slide-caption {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  bottom: 0; left: 0; right: 0;
   padding: 1rem 1.5rem;
-  background: linear-gradient(transparent, rgba(5, 13, 26, 0.9));
+  background: linear-gradient(transparent, rgba(5,13,26,0.9));
   color: var(--text);
   font-size: 0.9rem;
   font-style: italic;
@@ -1338,59 +1016,35 @@ button {
 
 .slide-btn {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(5, 13, 26, 0.7);
+  top: 50%; transform: translateY(-50%);
+  background: rgba(5,13,26,0.7);
   border: 1px solid var(--border-glow);
   color: var(--ciano);
-  width: 44px;
-  height: 44px;
+  width: 44px; height: 44px;
   border-radius: 50%;
   font-size: 1.2rem;
   cursor: pointer;
-  transition:
-    background 0.2s,
-    transform 0.2s;
+  transition: background 0.2s, transform 0.2s;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
 }
-.slide-btn:hover {
-  background: var(--ciano);
-  color: var(--bg);
-  transform: translateY(-50%) scale(1.08);
-}
-.slide-prev {
-  left: 14px;
-}
-.slide-next {
-  right: 14px;
-}
+.slide-btn:hover { background: var(--ciano); color: var(--bg); transform: translateY(-50%) scale(1.08); }
+.slide-prev { left: 14px; }
+.slide-next { right: 14px; }
 
 .slide-dots {
   position: absolute;
-  bottom: 14px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  z-index: 2;
+  bottom: 14px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 8px; z-index: 2;
 }
 .dot {
-  width: 8px;
-  height: 8px;
+  width: 8px; height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255,255,255,0.35);
   cursor: pointer;
-  transition:
-    background 0.2s,
-    transform 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
-.dot.active {
-  background: var(--ciano);
-  transform: scale(1.3);
-}
+.dot.active { background: var(--ciano); transform: scale(1.3); }
 
 .theme-btns {
   display: flex;
@@ -1407,42 +1061,23 @@ button {
   border: 2px solid var(--border);
   background: var(--bg-card);
   color: var(--text-muted);
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  transition:
-    border-color 0.25s,
-    color 0.25s,
-    background 0.25s,
-    transform 0.2s;
+  transition: border-color 0.25s, color 0.25s, background 0.25s, transform 0.2s;
 }
-.theme-btn:hover {
-  transform: translateY(-2px);
-  border-color: var(--border-glow);
-  color: var(--text-bright);
-}
-.theme-btn.active {
-  border-color: var(--ciano);
-  color: var(--ciano);
-  background: var(--ciano-dim);
-}
+.theme-btn:hover { transform: translateY(-2px); border-color: var(--border-glow); color: var(--text-bright); }
+.theme-btn.active { border-color: var(--ciano); color: var(--ciano); background: var(--ciano-dim); }
 
 .theme-circle {
-  width: 18px;
-  height: 18px;
+  width: 18px; height: 18px;
   border-radius: 50%;
   flex-shrink: 0;
 }
-.theme-btn-space .theme-circle {
-  background: linear-gradient(135deg, #050d1a, #00d4ff);
-}
-.theme-btn-solar .theme-circle {
-  background: linear-gradient(135deg, #1a0a00, #ffaa00);
-}
-.theme-btn-aurora .theme-circle {
-  background: linear-gradient(135deg, #020f0f, #00ffb3);
-}
+.theme-btn-space .theme-circle  { background: linear-gradient(135deg, #050d1a, #00d4ff); }
+.theme-btn-solar .theme-circle  { background: linear-gradient(135deg, #1a0a00, #ffaa00); }
+.theme-btn-aurora .theme-circle { background: linear-gradient(135deg, #020f0f, #00ffb3); }
 
 .quiz-box {
   max-width: 720px;
@@ -1452,6 +1087,7 @@ button {
   border-radius: var(--radius-lg);
   padding: 2.5rem;
 }
+
 .quiz-progress {
   display: flex;
   align-items: center;
@@ -1459,7 +1095,7 @@ button {
   margin-bottom: 2rem;
 }
 .quiz-progress span {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.82rem;
   color: var(--text-muted);
   white-space: nowrap;
@@ -1478,20 +1114,23 @@ button {
   width: 10%;
   transition: width 0.4s ease;
 }
+
 .quiz-question {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-bright);
   margin-bottom: 1.5rem;
   line-height: 1.5;
 }
+
 .quiz-options {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   margin-bottom: 1.5rem;
 }
+
 .quiz-option {
   width: 100%;
   text-align: left;
@@ -1501,34 +1140,17 @@ button {
   background: var(--bg-card2);
   color: var(--text);
   font-size: 0.95rem;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   cursor: pointer;
-  transition:
-    border-color 0.2s,
-    background 0.2s,
-    color 0.2s;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
 }
-.quiz-option:hover:not(:disabled) {
-  border-color: var(--ciano);
-  color: var(--ciano);
-  background: var(--ciano-dim);
-}
-.quiz-option.correta {
-  border-color: var(--green) !important;
-  background: rgba(0, 255, 136, 0.08) !important;
-  color: var(--green) !important;
-}
-.quiz-option.errada {
-  border-color: var(--red) !important;
-  background: rgba(255, 77, 77, 0.08) !important;
-  color: var(--red) !important;
-}
-.quiz-option:disabled {
-  cursor: default;
-}
-.quiz-next-btn {
-  margin-top: 0.5rem;
-}
+.quiz-option:hover:not(:disabled) { border-color: var(--ciano); color: var(--ciano); background: var(--ciano-dim); }
+.quiz-option.correta { border-color: var(--green) !important; background: rgba(0,255,136,0.08) !important; color: var(--green) !important; }
+.quiz-option.errada  { border-color: var(--red)   !important; background: rgba(255,77,77,0.08)  !important; color: var(--red)   !important; }
+.quiz-option:disabled { cursor: default; }
+
+.quiz-next-btn { margin-top: 0.5rem; }
+
 .quiz-result {
   max-width: 720px;
   margin: 0 auto;
@@ -1538,47 +1160,44 @@ button {
   border-radius: var(--radius-lg);
   padding: 3rem 2rem;
 }
-.result-icon {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
+.result-icon { font-size: 3.5rem; margin-bottom: 1rem; }
 .quiz-result h3 {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--text-bright);
   margin-bottom: 0.75rem;
 }
-.quiz-result p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
+.quiz-result p { color: var(--text-muted); font-size: 1rem; margin-bottom: 0.5rem; }
 .result-score {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 1.2rem !important;
   font-weight: 700;
   color: var(--ciano) !important;
   margin-bottom: 1.5rem !important;
 }
+
 .form-wrap {
   max-width: 620px;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
 }
+
 .form-group label {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.04em;
 }
+
 .form-group input,
 .form-group textarea {
   background: var(--bg-card);
@@ -1587,29 +1206,33 @@ button {
   padding: 0.75rem 1rem;
   color: var(--text-bright);
   font-size: 0.95rem;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   transition: border-color 0.2s;
   resize: vertical;
 }
+
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: var(--ciano);
 }
+
 .form-group input.input-erro,
 .form-group textarea.input-erro {
   border-color: var(--red);
 }
+
 .form-error {
   font-size: 0.8rem;
   color: var(--red);
   min-height: 1rem;
 }
+
 .form-success {
   margin-top: 0.5rem;
   padding: 1rem 1.2rem;
   border-radius: var(--radius);
-  background: rgba(0, 255, 136, 0.08);
+  background: rgba(0,255,136,0.08);
   border: 1px solid var(--green);
   color: var(--green);
   font-size: 0.95rem;
